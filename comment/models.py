@@ -10,6 +10,7 @@ class Common_Comment(Common):
 
     class Meta:
         abstract = True
+        ordering = ["-created_at"]
 
 
 class Comment(Common_Comment):

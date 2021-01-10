@@ -9,7 +9,7 @@ class Common(models.Model):
 
     class Meta:
         abstract = True
-        ordering = ["created_at"]
+        ordering = ["-created_at"]  # - : 내림차순
 
     def delete(self, using=None, keep_parents=False):
         self.deleted_at = datetime.now()
